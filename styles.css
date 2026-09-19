@@ -1,0 +1,230 @@
+/* Reset general del Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales - Mobile First */
+.pagina {
+    background-color: #F7F3EC;
+    color: #24343A;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+.contenido {
+    padding: 20px;
+}
+
+/* Encabezado y navegación */
+.encabezado {
+    background-color: #1F4D4F;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.marca {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.navegacion {
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+.enlace-menu {
+    color: #FFFFFF;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Secciones */
+.seccion {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.titulo-principal {
+    color: #1F4D4F;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.titulo-seccion {
+    color: #D9825B;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.titulo-tarjeta {
+    color: #1F4D4F;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.texto {
+    color: #24343A;
+    font-size: 1rem;
+}
+
+/* CSS Grid - mobile */
+.presentacion {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "texto"
+        "imagen";
+    gap: 20px;
+}
+
+.bloque-texto {
+    grid-area: texto;
+}
+
+.figura {
+    grid-area: imagen;
+    text-align: center;
+}
+
+.imagen-principal {
+    width: 100%;
+}
+
+.epigrafe {
+    color: #5A666A;
+    font-size: 0.9rem;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "tarjeta1"
+        "tarjeta2"
+        "tarjeta3";
+    gap: 20px;
+}
+
+.tarjeta-1 { grid-area: tarjeta1; }
+.tarjeta-2 { grid-area: tarjeta2; }
+.tarjeta-3 { grid-area: tarjeta3; }
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "servicio1"
+        "servicio2"
+        "servicio3";
+    gap: 20px;
+}
+
+.servicio-1 { grid-area: servicio1; }
+.servicio-2 { grid-area: servicio2; }
+.servicio-3 { grid-area: servicio3; }
+
+.tarjeta {
+    background-color: #F0E7DC;
+    padding: 20px;
+}
+
+/* Formulario */
+.formulario {
+    background-color: #F0E7DC;
+    padding: 20px;
+}
+
+.etiqueta {
+    color: #1F4D4F;
+    font-weight: 600;
+}
+
+.campo {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.boton {
+    background-color: #D9825B;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+/* Pie */
+.pie {
+    background-color: #24343A;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+.texto-pie {
+    color: #FFFFFF;
+}
+
+.enlace-pie {
+    color: #F2C9A5;
+    text-decoration: none;
+}
+
+/* Breakpoint de escritorio */
+@media (min-width: 1024px) {
+    .contenido {
+        padding: 30px;
+    }
+
+    .encabezado {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+
+    .navegacion {
+        width: auto;
+    }
+
+    .menu {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .titulo-principal {
+        font-size: 2.4rem;
+    }
+
+    .presentacion {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "texto imagen";
+        align-items: center;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "tarjeta1 tarjeta2 tarjeta3";
+    }
+
+    .servicios-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "servicio1 servicio2 servicio3";
+    }
+}
